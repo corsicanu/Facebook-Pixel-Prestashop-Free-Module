@@ -340,6 +340,8 @@ class Facebookpixelinstaller extends Module
         if(Tools::getValue('controller') === "search") {
             $search_str = Tools::getValue('s');
         }
+        $orderContents = array();
+        $orderContent_ids = array();
         if(Configuration::get('facebook_pixel_id') != '' && Configuration::get('facebook_pixel_active')) {
             $this->context->smarty->assign(
                 array(
